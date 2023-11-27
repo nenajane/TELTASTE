@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">TELTASTE</string>
+    <string name="logo_of_teltase">Logo of Teltase</string>
+    <string name="all_recipes">All Recipes</string>
+    <string name="categoty_items">Categoty Items</string>
+    <string name="get_started">Get Started</string>
+    <string name="category_name">Category name</string>
+</resources>
