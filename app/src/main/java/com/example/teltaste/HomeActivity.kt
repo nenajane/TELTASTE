@@ -44,7 +44,7 @@ class HomeActivity : AppCompatActivity() {
         rvMainCategory?.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         rvMainCategory?.adapter = mainCategoryAdapter
 
-        rvSubCategory?.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
+        rvSubCategory?.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
         rvSubCategory?.adapter = subCategoryAdapter
     }
 }

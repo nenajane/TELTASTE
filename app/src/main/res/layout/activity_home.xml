@@ -53,7 +53,7 @@
                 android:id="@+id/rv_main_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:orientation="horizontal"
                 tools:itemCount="1"
                 tools:listitem="@layout/item_rv_main_category" />
@@ -73,8 +73,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
-                android:orientation="horizontal"
-                tools:itemCount="1"
+                android:orientation="vertical"
+                tools:itemCount="2"
                 tools:listitem="@layout/item_rv_sub_category" />
 
 
