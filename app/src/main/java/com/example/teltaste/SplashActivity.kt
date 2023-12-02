@@ -8,14 +8,18 @@ import androidx.appcompat.app.AppCompatActivity
 import com.example.teltaste.databinding.ActivityHomeBinding
 import com.example.teltaste.interfaces.GetDataService
 import com.example.teltaste.retrofitclient.RetrofitClientInstance
+import pub.devrel.easypermissions.EasyPermissions
 import retrofit2.Call
 import retrofit2.Response
 import java.util.Locale
 import java.util.Locale.Category
 import javax.security.auth.callback.Callback
 
-class SplashActivity : AppCompatActivity() {
 
+
+
+class SplashActivity : BaseActivity(), EasyPermissions.RationaleCallbacks, EasyPermissions.PermissionCallbacks {
+    private var READ_STORAGE_PERM = 123
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splash)
@@ -25,29 +29,34 @@ class SplashActivity : AppCompatActivity() {
             finish()
         }, 3000)
 
-    fun getCategoty() {
-        val service = RetrofitClientInstance.retrofitInstance.create(GetDataService::class.java)
-        val call = service.getCategoryList()
-        call.enqueue(object: retrofit2.Callback<List<Category>> {
-            override fun onResponse(
-                call: Call<List<Category>>,
-                response: Response<List<Category>>
-            ) {
-                insertDataIntoRoomDb(response.body())
-            }
+        fun getCategoty() {
+            val service =
+                RetrofitClientInstance.retrofitInstance!!.create(GetDataService::class.java)
+            val call = service.getCategoryList()
+            call.enqueue(object : Callback<Category>,
+                retrofit2.Callback<com.example.teltaste.entities.Category> {
+                override fun onResponse(
+                    call: Call<com.example.teltaste.entities.Category>,
+                    response: Response<com.example.teltaste.entities.Category>
+                ) {
+                    for (arr in response.body()!!.categorieitems!!) {
+                        getMeal(arr.strcategory)
+                    }
 
-            override fun onFailure(call: Call<List<Category>>, t: Throwable) {
-                Toast.makeText(this@SplashActivity, "Something went wrong", Toast.LENGTH_SHORT)
-                    .show()
-            }
+                }
 
-        })
+                override fun onFailure(
+                    call: Call<com.example.teltaste.entities.Category>,
+                    t: Throwable
+                ) {
+                    Toast.makeText(this@SplashActivity, "Something went wrong", Toast.LENGTH_SHORT)
+                        .show()
+                }
+
+
+            })
+
+        }
     }
-
-    }
-
-    private fun insertDataIntoRoomDb(category: List<Category>?) {
-
-    }
-
 }
+

@@ -9,7 +9,7 @@ import com.example.teltaste.adapter.MainCategoryAdapter
 import com.example.teltaste.adapter.SubCategoryAdapter
 import com.example.teltaste.entities.Recipes
 
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : BaseActivity() {
 
     var arrMainCategory = ArrayList<Recipes>()
     var arrSubCategory = ArrayList<Recipes>()
@@ -40,6 +40,7 @@ class HomeActivity : AppCompatActivity() {
         arrSubCategory.add(Recipes(2, "Salad"))
         arrSubCategory.add(Recipes(3, "Graham"))
         arrSubCategory.add(Recipes(4, "Cookies"))
+
 
         subCategoryAdapter.setData(arrSubCategory)
 

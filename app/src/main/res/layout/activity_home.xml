@@ -74,12 +74,10 @@
                 android:id="@+id/rv_sub_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="5dp"
                 android:orientation="vertical"
                 tools:itemCount="4"
                 tools:listitem="@layout/item_rv_sub_category" />
-
-
 
 
         </LinearLayout>

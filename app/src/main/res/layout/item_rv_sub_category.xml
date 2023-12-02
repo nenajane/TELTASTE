@@ -11,6 +11,7 @@
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_gravity="center"
         android:columnCount="2"
         android:rowCount="2">
 
@@ -41,7 +42,7 @@
                     android:layout_height="130dp"
                     android:adjustViewBounds="true"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/logotel" />
+                    android:src="@drawable/sisig" />
 
                 <TextView
                     android:id="@+id/tv_dish_name"
