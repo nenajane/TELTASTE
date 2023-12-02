@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -58,6 +58,7 @@
                 tools:itemCount="1"
                 tools:listitem="@layout/item_rv_main_category" />
 
+
             <TextView
                 android:id="@+id/tvCategory"
                 android:layout_width="match_parent"
@@ -68,18 +69,21 @@
                 android:textColor="@color/black"
                 android:textSize="15sp" />
 
+
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/rv_sub_category"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="10dp"
                 android:orientation="vertical"
-                tools:itemCount="2"
+                tools:itemCount="4"
                 tools:listitem="@layout/item_rv_sub_category" />
+
+
 
 
         </LinearLayout>
     </ScrollView>
 
 
-</RelativeLayout>
+</LinearLayout>

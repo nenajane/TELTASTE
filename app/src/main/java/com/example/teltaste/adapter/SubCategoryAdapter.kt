@@ -10,6 +10,7 @@ import com.example.teltaste.entities.Recipes
 
 class SubCategoryAdapter :RecyclerView.Adapter<SubCategoryAdapter.RecipeViewHolder>() {
 
+
     var arrSubCategory = ArrayList<Recipes>()
     class RecipeViewHolder(view: View): RecyclerView.ViewHolder(view){
 

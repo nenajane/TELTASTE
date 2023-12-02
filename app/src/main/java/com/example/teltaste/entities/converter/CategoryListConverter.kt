@@ -2,8 +2,8 @@ package com.example.teltaste.entities.converter
 
 import androidx.room.TypeConverter
 import androidx.room.TypeConverters
-import com.codingwithme.recipeapp.entities.Category
-import com.codingwithme.recipeapp.entities.CategoryItems
+import com.example.teltaste.entities.Category
+import com.example.teltaste.entities.CategoryItems
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 

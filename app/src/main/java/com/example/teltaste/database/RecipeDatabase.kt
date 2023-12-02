@@ -5,8 +5,8 @@ import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
-import com.codingwithme.recipeapp.entities.Category
-import com.codingwithme.recipeapp.entities.CategoryItems
+import com.example.teltaste.entities.Category
+import com.example.teltaste.entities.CategoryItems
 import com.example.teltaste.dao.RecipeDao
 import com.example.teltaste.entities.Recipes
 import com.example.teltaste.entities.converter.CategoryListConverter

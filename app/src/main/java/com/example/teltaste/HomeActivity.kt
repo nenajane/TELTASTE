@@ -2,6 +2,7 @@ package com.example.teltaste
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.teltaste.adapter.MainCategoryAdapter
@@ -23,6 +24,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
+
         rvMainCategory = findViewById(R.id.rv_main_category)
         rvSubCategory = findViewById(R.id.rv_sub_category)
 
@@ -37,14 +39,16 @@ class HomeActivity : AppCompatActivity() {
         arrSubCategory.add(Recipes(1, "Desert"))
         arrSubCategory.add(Recipes(2, "Salad"))
         arrSubCategory.add(Recipes(3, "Graham"))
-        arrSubCategory.add(Recipes(4, "Coockies"))
+        arrSubCategory.add(Recipes(4, "Cookies"))
 
         subCategoryAdapter.setData(arrSubCategory)
 
         rvMainCategory?.layoutManager = LinearLayoutManager(this,LinearLayoutManager.HORIZONTAL,false)
         rvMainCategory?.adapter = mainCategoryAdapter
 
-        rvSubCategory?.layoutManager = LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false)
+        rvSubCategory?.layoutManager = GridLayoutManager(this, 2, GridLayoutManager.VERTICAL, false)
         rvSubCategory?.adapter = subCategoryAdapter
+
+
     }
-}
+    }

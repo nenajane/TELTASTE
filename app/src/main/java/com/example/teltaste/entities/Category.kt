@@ -1,4 +1,4 @@
-package com.codingwithme.recipeapp.entities
+package com.example.teltaste.entities
 
 import androidx.room.*
 import com.example.teltaste.entities.converter.CategoryListConverter
